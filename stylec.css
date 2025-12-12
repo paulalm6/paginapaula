@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Nunito:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap");
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        border: none;
+        outline: none;
+        font-family: "Poppins", sans-serif;
+    }
+
+    html{
+        font-size: 62.5%;
+    }
+
+    body{
+        width: 100%;
+        height: 100vh;
+        overflow-x: hidden;
+        background-color: antiquewhite;
+        color: black;
+    }
+
+    header{
+        margin-top: 22px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 1rem 9%;
+        background-color: antiquewhite;
+        filter: drop-shadow(10px);
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        z-index: 100;   
+    }
+    
+    nav a{
+        font-size: 1.6rem;
+        color: darkslategrey;
+        margin-left: 4rem;
+        font-weight: 500;
+        transition: 0.3s ease;
+        border-bottom: none;
+        text-decoration: none !important;
+    }
+
+    nav a:hover,
+    nav a.active{
+        color: rgb(176, 102, 135);
+        border-bottom: none;
+        text-decoration: none !important;
+    }
+
+    .home{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8rem;
+        background-color: antiquewhite ;
+    }
+
+    .home .home-content h1{
+        font-size: 6rem;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+
+    span{
+        color: rgb(161, 81, 117);
+    }
+
+    .typing-text{
+        font-size: 34px;
+        font-weight: 600;
+        min-width: 280px;
+    }
+
+    .typing-text span{
+        position: relative;
+    }
+
+    .typing-text span::before{
+        content: "contacto";
+        color: cadetblue;
+        animation: words 2.5s infinite;
+    }
+
+    .typing-text span::after{
+        content: "";
+        background-color: antiquewhite;
+        position: absolute;
+        width: calc(100% + 8px);
+        height: 100%;
+        border-left: 3px solid black;
+        right: -8;
+        animation: cursor 0.6s infinite;
+    }
+
+     @keyframes cursor{
+        to{
+            border-left: 3px solid rgb(176, 102, 135);
+        }
+    }
+
+    @keyframes words{
+        0%, 10%{
+            content: "¡C";
+        }
+        11%, 20%{
+            content: "¡Co";
+        }
+        21%, 30%{
+            content: "¡Con";
+        }
+        31%,40%{
+            content: "¡Cont";
+        }
+        41%, 50%{
+            content: "¡Contá";
+        }
+        51%, 60%{
+            content: "¡Contác";
+        }
+        61%, 70%{
+            content: "¡Contáct";
+        }
+        71%, 80%{
+            content: "¡Contácta";
+        }
+        81%,90%{
+            content: "¡Contáctam";
+        }
+        91%, 100%{
+            content: "¡Contáctame!";
+        }
+    }
+
+    @media(max-width:995px){
+        .home{
+            gap: 4rem;
+        }
+    }
+
+    @media(max-width:995px){
+        .home{
+            flex-direction: column;
+            margin: 5rem 4rem;
+        }
+
+        .home-content h1{
+            font-size: 5rem;
+        }
+
+    }
+
+    @media(max-width:995px){
+        nav{
+            position: absolute;
+            display: none;
+            top: 0;
+            right: 0;
+            width: 40%;
+            border-left: none;
+            border-bottom: none;
+            border-bottom-left-radius: none;
+            padding: 1rem solid;
+            background-color: darkgray;
+            border-top: 0.1rem solid rgba(0,0,0,1);
+            text-decoration: none !important;
+        }
+
+        nav.active{
+            display: block;
+        } 
+
+        nav a{
+            display: block;
+            font-size: 2rem;
+            margin: 3rem 0;
+            border-bottom: none;
+            text-decoration: none !important;
+            box-shadow: none;
+        }
+
+        nav a:hover,
+        nav a.active{
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border-bottom: none;
+            text-decoration: none !important;
+        }
+    }
+
+    .contacto-contenedor {
+        display: flex;
+        max-width: 1200px; 
+        padding: 20;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 25px; 
+        width: 100%;
+        background-color: antiquewhite;
+    }
+
+    .contenedor-formulario {
+        flex: 1;              
+        padding-left: 60px;
+        background-color: antiquewhite;
+    }
+
+    .formulario-google {
+        width: 600px;
+        height: 500px;
+        border-radius: 10px;
+        border: none;
+        background-color: antiquewhite;
+        box-shadow: 0 0 25px antiquewhite;
+    }
+
+    .contenedor-mapa {
+        flex: 1;              
+        padding-left: 100px;
+        background-color: antiquewhite;
+        box-shadow: 0 0 25px antiquewhite;
+    }
+
+    .mapa-google {
+        width: 120%;
+        height: 350px;
+        border-radius: 10px;
+        border: none;
+        background-color: antiquewhite;
+    }
+
+    .contacto-contenedor {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+    .columna {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 50px; 
+    }
+
+    .formulario-google {
+        width: 100%;
+        height: 500px;
+        border-radius: 10px;
+        border: none;
+    }
+
+    .mapa-google {
+        width: 100%;
+        height: 350px;
+        border-radius: 10px;
+        border: none;
+    }
+
+    .audio {
+        width: 100%;
+        margin-top: 60px;
+    }
+
+    .logo {
+        height: 80px;
+        width: auto;
+        border-radius: 10px;
+        margin-top: 150px;
+    }
+
+    @media (max-width: 995px) {
+        .contacto-contenedor {
+            flex-direction: column;
+        }
+    }
+
+    @media (max-width: 995px) {
+            .home{
+            flex-direction: column;
+            margin: 5rem 4rem;
+        }
+
+        .home-content h1{
+            font-size: 5rem;
+        }
+    .contacto-contenedor {
+        flex-direction: column;
+        gap: 30px;
+        }
+
+    .mapa-google,
+    .formulario-google {
+        height: 350px;
+    }
+}
+
